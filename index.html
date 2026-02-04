@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flappy Bird</title>
+  <style>
+    body { background: #70c5ce; margin: 0; overflow: hidden; }
+    canvas { display: block; margin: 0 auto; background: #70c5ce; }
+    .center { text-align: center; margin-top: 20px; }
+    .btn-group button {
+      background: #fff;
+      border: 1px solid #888;
+      color: #333;
+      padding: 8px 16px;
+      margin: 2px;
+      cursor: pointer;
+      border-radius: 5px;
+      font-size: 16px;
+      transition: background 0.2s;
+    }
+    .btn-group button.active {
+      background: #ffd700;
+      color: #222;
+    }
+    .ranking {
+      background: rgba(255,255,255,0.8);
+      display: inline-block;
+      padding: 10px 20px;
+      border-radius: 10px;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <canvas id="gameCanvas" width="400" height="600"></canvas>
+  <div class="center">
+    <div class="btn-group">
+      <button id="easyBtn">Easy</button>
+      <button id="normalBtn" class="active">Normal</button>
+      <button id="hardBtn">Hard</button>
+    </div>
+    <p>스페이스바 또는 화면 클릭으로 조작하세요!</p>
+    <div class="ranking" id="rankingBox">
+      <strong>점수 랭킹 TOP 5</strong>
+      <ol id="rankingList"></ol>
+    </div>
+  </div>
+  <script src="game.js"></script>
+</body>
+</html>
